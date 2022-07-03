@@ -2,6 +2,10 @@
 
 ランダムグラフ上の最小全域木の和の期待値が$\zeta(3)$に収束することを確認するC++のコード
 
+$n$頂点のランダムグラフの最小全域木の和の確率変数を$T_{n}$とおくと、
+- $\lim\mathbb{E}[T_{n}]=\zeta(3)$
+- $\lim n\cdot\mathrm{Var}(T_{n})=...$
+
 参考文献
 - [Wikipedia](https://en.wikipedia.org/wiki/Minimum_spanning_tree#MST_on_complete_graphs)
 - [Concentration Inequalities: A Nonasymptotic Theory of Independence](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780199535255.001.0001/acprof-9780199535255)
@@ -22,3 +26,12 @@ make
 - `n_iter`: ランダムグラフを何回生成させるか(上の例だと`n_iter=100`)
 
 ## Result
+100頂点から3200頂点まで和を計算してみる。
+```bash
+./run 100 1000 > data/mst100.txt
+./run 200 1000 > data/mst200.txt
+./run 400 1000 > data/mst400.txt
+./run 800 1000 > data/mst800.txt
+./run 1600 1000 > data/mst1600.txt
+./run 3200 1000 > data/mst3200.txt
+```
