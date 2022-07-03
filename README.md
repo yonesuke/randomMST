@@ -35,3 +35,6 @@ make
 ./run 1600 1000 > data/mst1600.txt
 ./run 3200 1000 > data/mst3200.txt
 ```
+
+$\mathbb{E}[T_{n}]$と$n\cdot\mathrm{Var}(T_{n})$の$n$依存性をそれぞれ眺めてみる。
+![](result.png)
