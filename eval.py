@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import mpmath
 
 z3 = mpmath.zeta(3, 1)
+z4 = mpmath.zeta(4, 1)
 
 ns = [100, 200, 400, 800, 1600, 3200]
 fnames = [f"data/mst{n}.txt" for n in ns]
@@ -33,7 +34,9 @@ plt.legend()
 plt.subplot(2,1,2)
 plt.xscale("log")
 plt.scatter(ns, ns*variances)
+plt.plot([100, 3200], [6*z4 - 4*z3, 6*z4 - 4*z3], ls="dashed", color="gray", label="$6\zeta(4)-4\zeta(3)$")
 plt.xlabel("n")
 plt.ylabel("n * variance")
+plt.legend()
 
 plt.savefig("result.png")

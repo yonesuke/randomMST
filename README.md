@@ -4,7 +4,7 @@
 
 $n$頂点のランダムグラフの最小全域木の和の確率変数を$T_{n}$とおくと、
 - $\lim\mathbb{E}[T_{n}]=\zeta(3)$
-- $\lim n\cdot\mathrm{Var}(T_{n})=...$
+- $\lim n\cdot\mathrm{Var}(T_{n})=6\zeta(4)-4\zeta(3)$
 
 参考文献
 - [Wikipedia](https://en.wikipedia.org/wiki/Minimum_spanning_tree#MST_on_complete_graphs)
