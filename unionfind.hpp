@@ -70,7 +70,7 @@ int UnionFind::setSize(int x)
 
 bool UnionFind::isSame(int x, int y)
 {
-    return (parents[x] == parents[y]);
+    return (findRoot(x) == findRoot(y));
 }
 
 std::vector<int> UnionFind::setMember(int x)
