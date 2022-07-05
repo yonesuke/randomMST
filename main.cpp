@@ -1,6 +1,7 @@
 #include <random>
 #include <vector>
 #include <iostream>
+#include <iomanip>
 
 #include "kruskal.hpp"
 
@@ -30,6 +31,6 @@ int main(int argc, char *argv[])
         Kruskal krs(n, edges);
 
         //output
-        std::cout << krs.sum << std::endl;
+        std::cout << std::fixed << std::setprecision(15) << krs.sum << std::endl;
     }
 }
